@@ -16,7 +16,7 @@
 //         \  \ `_.   \_ __\ /__ _/   .-` /  /
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
-//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//     ~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js'); //Importamos configuracion del servidor
 const { conn } = require('./src/db.js'); //Importamos base de datos.
 
