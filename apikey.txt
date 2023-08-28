@@ -1,0 +1,35 @@
+Developer info
+
+Your Current Plan
+Free
+
+Number of requests left for the period
+20000
+
+Number of requests will renew on
+25/9/2023
+
+Full name
+franco rosales
+
+Contact email
+franco.rosales2130@gmail.com
+
+Site/App url
+
+Describe in a few words how you would like to use RAWG’s API
+App
+
+-----------
+
+
+API Key
+72f7dfa7bab44468bc6a199154bd7cd4
+
+-----------
+
+
+localhost:3001/videogames/2?api_key=72f7dfa7bab44468bc6a199154bd7cd4 
+-----------
+
+cada vez que se hace una consulta a la API se coloca la API_KEY como una variable que viene por GET
