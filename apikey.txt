@@ -6,16 +6,16 @@ Free
 Number of requests left for the period
 20000
 
-Number of requests will renew on
+Number of requests will renew on:
 25/9/2023
 
-Full name
+Full name:
 franco rosales
 
-Contact email
+Contact email:
 franco.rosales2130@gmail.com
 
-Site/App url
+Site/App url:
 
 Describe in a few words how you would like to use RAWG’s API
 App
@@ -23,7 +23,7 @@ App
 -----------
 
 
-API Key
+API Key:
 72f7dfa7bab44468bc6a199154bd7cd4
 
 -----------
