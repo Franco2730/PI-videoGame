@@ -21,7 +21,7 @@ const getVideogames = async (req, res) => {
             },
         })    
 
-        //Acá hay algo mal, buscar en el video de back numero 2 (martes) que pasó Nicolas Burgueño.. Hay que buscar los users desde la api....
+        //Acá hay algo mal, buscar en el video de back numero 2 (martes) que pasó Nicolas Burgueño.. Hay que buscar los users desde la api....!!!
 
         //-----------=>
         const apiVideoGames = data.results

@@ -23,6 +23,7 @@ module.exports = (sequelize) => {
 };
 
 
+
 // https://api.rawg.io/api/genres?key=72f7dfa7bab44468bc6a199154bd7cd4
 
 //Modelos son las tablas de la base de datos.
