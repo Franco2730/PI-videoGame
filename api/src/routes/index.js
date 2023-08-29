@@ -1,7 +1,8 @@
 const { Router } = require('express');
 // Importar todos los routers;
-// Ejemplo: const authRouter = require('./auth.js');
-const findGames = require("../controllers/findGames");
+// Ejemplo: const authRouter = require('./auth.js'); 
+const getVideoGames = require('../controllers/getVideoGames');
+
 
 
 
@@ -12,16 +13,7 @@ const router = Router();
 
 
 
-router.get("/videogames", async (req, res) => {
-
-    try {
-        const games = await findGames();
-        res.status(200).json(games);        
-    } catch (error) {
-        
-    }
-})
-
+router.get("/videogames", getVideoGames )
 
 
 module.exports = router;
