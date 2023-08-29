@@ -3,9 +3,6 @@ const { DB_API } = process.env;
 const { Videogame, Genre } = require ("../db");
 const axios = require("axios");
 
-// console.log(process.env.DB_API);
-// console.log(DB_API);
-// console.log("Error: DB_API not found");
 
 
 const getVideogames = async (req, res) => {
@@ -14,14 +11,9 @@ const getVideogames = async (req, res) => {
 
         // Busco todos los usuarios de la base de datos
         const databaseVideogames = await Videogame.findAll({
-            include: {
-                model: Genre,
-                attributes: ["Genero"],
-                through: { attributes: [] },
-            },
-        });
+            include: Genre
 
-        //Acá hay algo mal, buscar en el video de back numero 2 (martes) que pasó Nicolas Burgueño.. Hay que buscar los users desde la api....!!!
+        });
 
         const { data } = await axios.getAdapter(
             `https://api.rawg.io/api/games?key=${DB_API}&page_size=100`
@@ -39,4 +31,24 @@ const getVideogames = async (req, res) => {
     }
 };
 
-module.exports = getVideogames;
+const getGenres = async(req, res) => {
+    const count = await Genre.count()
+    if( count === 0 ) {
+        const { data } = await axios.get(
+            `https://api.rawg.io/api/genres?key=${DB_API}`
+        );
+        const apiRespuesta = data.results
+
+        for( let i = 0; i < apiRespuesta.length; i++ ) {
+            let generoCaptado = apiRespuesta.nombre;
+        };
+    }
+}
+
+module.exports = { getVideogames };
+
+
+
+// for( let i = 0; i < apiRespuesta.length; i++ ) {
+//     let generoCaptado = apiRespuesta.nombre;
+// };
