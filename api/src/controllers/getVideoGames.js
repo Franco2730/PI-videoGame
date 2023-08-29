@@ -7,7 +7,7 @@ require("dotenv").config();
 // console.log(process.env.DB_API);
 // console.log(DB_API);
 // console.log("Error: DB_API not found");
-
+//...
 
 const getVideoGames = async (req, res) => {
 
