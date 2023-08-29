@@ -34,3 +34,4 @@ module.exports = (sequelize) => {
 //flujo el controlador consulta al modelo que con antelación definio sus relaciones y su respuesta es para el enrutador. 
 
 //Al enrutador le llegan datos el consulta al controlador el controlador consulta a los modelos y este consulta a la BD y todo esto se devuelve cuando la BD le dice a los modelos que tiene la información, luego el modelo al controlador y el controlador al enrutador. 
+//Tomar nota del blok 33.
