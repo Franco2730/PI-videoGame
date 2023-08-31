@@ -25,4 +25,4 @@ const getVideoGames = async (req, res) => {
         res.status(400).json({ error: error.message });
     };
 };
-module.exports = getVideoGames;
+module.exports = {getVideoGames};

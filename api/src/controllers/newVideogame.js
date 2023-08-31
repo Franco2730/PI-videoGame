@@ -32,4 +32,4 @@ const newVideogame = async (req, res) => {
     };
 };
 
-module.exports = newVideogame;
+module.exports = {newVideogame};
