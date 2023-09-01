@@ -1,28 +1,30 @@
+const { Genre } = require ("../db"); 
+const axios = require ('axios');
 require("dotenv").config();
 const { DB_API } = process.env;
-const axios = require("axios");
-const { Videogame, Genre } = require("../db");
 
-const getVideoGames = async (req, res) => {
+const getGenres = async (req, res) => {
     try {
-        const databaseVideogames = await Videogame.findAll({
-            include:{
-                model: Genre,
-                attributes: ["Genero"],
-                through: { attributes: [] },
-            },
-        });
-
-        const { data } = await axios.getAdapter(
-            `https://api.rawg.io/api/games?key=${DB_API}&page_size=100`
+        const { data } = await axios.get(
+          `https://api.rawg.io/api/genres?key=${DB_API}`
         );
-        const apiVideogames = data.results;
+    
+        const genres = data.results;
+        const genresFilteres = genres?.map((genre) => genre.name);
+        
+        genresFilteres.forEach(async (g) => {
+            await Genre.findOrCreate({
+                where: {
+          name: g,
+        },
+    });
+});
+const allGenres = await Genre.findAll();
+res.json(allGenres); //da la peticion
 
-        const allVideogames = [ ...databaseVideogames, ...apiVideogames ];
+}catch(
+    error
+){res.status(400).json({ error: error.message })}
+}
 
-        res.status(200).json(allVideogames);
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    };
-};
-module.exports = {getVideoGames};
+module.exports = { getGenres };

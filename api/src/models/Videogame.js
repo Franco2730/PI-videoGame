@@ -6,7 +6,7 @@ module.exports = (sequelize) => {
   sequelize.define('Videogame', {
     id: {
       type: DataTypes.UUID, //Establece el tipo de columna id.
-      defaultValues: DataTypes.UUIDV4, //El valor por defecto
+      defaultValue: DataTypes.UUIDV4, //El valor por defecto
       primaryKey: true,
       allowNull: false
     },
@@ -25,13 +25,18 @@ module.exports = (sequelize) => {
       allowNull: false
     },
 
+    platforms: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+
     image: {
       type: DataTypes.TEXT,
       allowNull: false
     },
 
     releaseDate: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false
     },
 

@@ -22,9 +22,21 @@ const getById = async (req, res) => {
             through: { attributes: [] },
           },
         });
+
+        const dbFiltered = {
+            id: dbVideogame.id,
+            Nombre: dbVideogame.name,
+            Plataformas: dbVideogame.platforms,
+            Descripcion: dbVideogame.description,
+            FechaLanzamiento: dbVideogame.releaseDate,
+            Rating: dbVideogame.rating,
+            Generos: dbVideogame.Genres.map((g) => g.name).join(", "),
+            Imagen: dbVideogame.image
+        };
+
         if (!dbVideogame) {
           res.status(404).send("No se escuentra en la base de datos");
-        } else return res.status(200).json(dbVideogame);}
+        } else return res.status(200).json(dbFiltered);}
         //Si no ingresa ya que el id es numerico.. 
 
     else {
