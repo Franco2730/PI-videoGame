@@ -1,4 +1,0 @@
-En la carpeta api - src - controllers hay 3 archivos: findGames.js / getGenres.js / getVideoGames.js / newVideogame.js. Donde: en cada uno están los controladores que tienen la logica para hacer algo con la info obtenida:
-
-En la carpeta models estan los modelos de las tablas. 
-En la carpeta routes está en archivo index.js donde estan las rutas que vamos a usar para solicitar información.

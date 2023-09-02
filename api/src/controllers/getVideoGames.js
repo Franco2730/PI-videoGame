@@ -13,7 +13,7 @@ const getVideogames = async (req, res) => {
       const dbByname = await Videogame.findAll({
         where: {
           name: {
-            [Op.iLike]: `%${name}%`, //operador de: si incluye "%"...
+            [Op.iLike]: `%${name}%`, //operador de: si incluye "%"... recordatorio: video 3 back. 1hs:22m
           },
         },
         include: {
