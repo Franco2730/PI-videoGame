@@ -10,3 +10,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Home />
   </React.StrictMode>,
 )
+// Tener en cuenta la imagen, cargar tareas en: https://trello.com/b/350TgZZ0/proyecto-individual
