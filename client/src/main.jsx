@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react' //Video 02:11
 import ReactDOM from 'react-router-dom'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
