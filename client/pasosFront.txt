@@ -1,0 +1,28 @@
+En este archivo vamos a tener el paso a paso de la parte del cliente de una app.
+Para comenzar con el Front de nuestra app vamos a:
+Mencionada app se estará levantando con Vite, para ello:
+
+    1- Vamos a colocar en la terminal: npm init vite@latest 
+    2- Vamos a completar todo lo que dicha terminal nos solicita: lo vamos a levantar en React con JavaScript, el nombre de la app, etc.
+    3- Vamos a dirigirnos al app.jsx y vamos a eliminar el cuerpo de la función app, todo lo que esta esté retornando. 
+    4- Eliminar las importaciones de hojas de estilos, y estas mismas, en efecto. 
+
+Para entender, de forma muy resumida lo que sucede al ejecutar el comando npm run dev (levantar el proyecto con vite) es: En primer lugar, se ejecuta el archivo index.jsx y hace un barrido de información, ya que como segunda acción se va directamente al archivo que dicho index está renderizando (App). 
+
+En app tenemos, dentro del return, lo que se estará mostrando en nuestra app.
+Todos los componentes necesitan un return que devuelvan un solo elemento en su mayor nivel (algo que envuelva a todos los elementos)
+<>
+  //Esto es mucho muy importante !! 
+</>
+
+Para comenzar con el ruteo, debemos crear los archivos que se vean beneficiados de dicho ruteo. 
+    1- Dentro de nuestra carpeta src vamos a crear tres carpetas llamadas: Views, Components y Redux. La diferencia entre componentes y views es que las views son los componentes principales (Home, formulario) y los componentes son los pequeños componentes dentro del views (cartas, navbar). Dicho esto, los views que vamos a necesitar son: landing.jsx, home.jsx, detail.jsx y form.jsx.
+
+    2- Dentro de Components vamos a crear un archivo llamado Navbar.jsx (cabe aclarar que la terminación de los mencionados archivos es .jsx por los beneficios que nos trae, al ser una extención de JS comprende una sintaxis familiar, la eficiencia es muy destacable y es muy mantenible) cuando vayamos a crear archivos de logica vamos a utilizar los archivos JavaScript de siempre.
+
+Vamos a comenzar a inicializar los componentes que tenemos:
+
+    1- Podemos de manera manual importar a react en cada componente, crear dicha funcion que retorne su cuerpo y debajo de ella exportarla, pero con la extencion: ES7 + React/Redux/React-Native snippets, solo con poner rafc, los importa react, y crea una funcion con el nombre del archivo y exporta la misma. Una maravilla con dulce de leche. 
+
+Una vez que tenemos todos nuestros componentes desarrollados, nos vamos a dirigir al archivo App (el que se renderiza del archivo principal (main)) y vamos a importar todos los componentes que vayamos a utilizar. (otra forma de ganar algo de tiempo es en las importaciones de archivos, cuando nos posicionamos sobre App, tenemos que tener abierto el archivo a importar y ni bien terminemos de escribir el componente, ya estará importado).
+ 
