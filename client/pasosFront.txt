@@ -25,5 +25,52 @@ Vamos a comenzar a inicializar los componentes que tenemos:
 
     1- Podemos de manera manual importar a react en cada componente, crear dicha funcion que retorne su cuerpo y debajo de ella exportarla, pero con la extencion: ES7 + React/Redux/React-Native snippets, solo con poner rafc, los importa react, y crea una funcion con el nombre del archivo y exporta la misma. Una maravilla con dulce de leche. 
 
-Una vez que tenemos todos nuestros componentes desarrollados, nos vamos a dirigir al archivo App (el que se renderiza del archivo principal (index)) y vamos a importar todos los componentes que vayamos a utilizar. (otra forma de ganar algo de tiempo es en las importaciones de archivos, cuando nos posicionamos sobre App, tenemos que tener abierto el archivo a importar y ni bien terminemos de escribir el componente, ya estará importado).
+Una vez que tenemos todos nuestros componentes desarrollados, nos vamos a dirigir al archivo App (el que se renderiza del archivo principal (main)) y vamos a importar todos los componentes que vayamos a utilizar. (otra forma de ganar algo de tiempo es en las importaciones de archivos, cuando nos posicionamos sobre App, tenemos que tener abierto el archivo a importar y ni bien terminemos de escribir el componente, ya estará importado).
+
+Muy importante tener en cuenta, en cada componente, la metodologia para que este funcione es: 
+    1- Hacernos la pregunta: Para que necesito / quiero este componente. De esa respuesta vamos a entender que necesitamos importar (useEfects, useSelector, useState, useDispatch, useParams.) 
+        
+         -> useEffect es un gancho que se utiliza para realizar efectos secundarios en nuestros componentes, estos efectos pueden ser: incluir solicitudes de red, la manipulación de nuestro DOM o suscripcion de eventos. 
+
+            useEffect(() => {
+            // Código para realizar efectos secundarios aquí
+            }, [dependencias]);
+        
+        dependencias= Es un array opcional que contiene las dependencias para el efecto. Nuestro useEffect se va a ejecutar cada vez que las dependencias cambien.
+
+         -> useSelector: useSelector es un gancho proporcionado por la librería Redux. Se utiliza para seleccionar datos del estado global de Redux en componentes de React. Te permite acceder a porciones específicas del estado global y usar esos datos en tus componentes.
+
+            const data = useSelector((state) => state.data);
+        
+         -> useState: useState es un gancho de React que permite a los componentes de función tener estado local. Puedes utilizarlo para declarar variables de estado en un componente de función. Cada vez que el estado cambia, React vuelve a renderizar el componente.
+
+            const [estado, setEstado] = useState(valorInicial);
+
+         -> useDispatch: useDispatch es otro gancho proporcionado por la librería Redux. Se utiliza para despachar acciones en el almacén de Redux desde componentes de React. Puedes usarlo para enviar acciones que desencadenarán cambios en el estado global de Redux.
+
+            const dispatch = useDispatch();
+            dispatch({ type: 'AÑADIR_ELEMENTO', payload: nuevoElemento });
+
+         -> useParams: useParams es un gancho proporcionado por la biblioteca react-router-dom. Se utiliza para acceder a los parámetros de la URL en componentes de React cuando se utiliza el enrutamiento. Puedes obtener valores de la URL según las rutas definidas en tu aplicación.
+
+             import { useParams } from 'react-router-dom';
+
+            function MiComponente() {
+                const { id } = useParams();
+                // 'id' contiene el valor del parámetro de la URL
+            }
+
+En resumen, estos ganchos y funciones son herramientas clave en el desarrollo de aplicaciones en React:
+
+    ->useEffect se utiliza para gestionar efectos secundarios y ciclos de vida.
+    ->useSelector y useDispatch se utilizan con Redux para gestionar el estado global y las acciones.
+    ->useState se usa para gestionar el estado local del componente.
+    ->useParams se usa en enrutamiento para acceder a los parámetros de la URL.
+
+    2- Crear la funcion / cuerpo del componente.
+    3- Exportar la misma. 
+
+    useState = estado locales !== redux. (mas adelante)
+    
+
  

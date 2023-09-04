@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Landing from "./Views/Form";
-import Detail from "./Views/Form";
-import Home from "./Views/Home";
-import Form from "./Views/Form";
+import Landing from "./Views/landing/Landing";
+import Detail from "./Views/form/Form";
+import Home from "./Views/home/Home.jsx";
+import Form from "./Views/form/Form";
 
 function App() {
   return (
