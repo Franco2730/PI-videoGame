@@ -16,16 +16,3 @@ const Card = ({ id, name, image, genre }) => {
 };
 
 export default Card;
-
-// const Card = ({ id, name, image, genre }) => {
-//   return (
-//     <div className="card">
-//       <div>
-//         <img src={image} alt="" />
-//         {id}
-//         {name}
-//         {genre}
-//       </div>
-//     </div>
-//   );
-// };
