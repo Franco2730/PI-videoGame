@@ -1,0 +1,33 @@
+.card {
+    width: 20rem;
+    border: .2rem solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.224);
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #e4dcdc;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .card-id,
+  .card-genre {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+  }
+
+  .cards{
+    display:inline-block;
+    margin-right: .5rem;
+  }
+  

@@ -71,6 +71,10 @@ En resumen, estos ganchos y funciones son herramientas clave en el desarrollo de
     3- Exportar la misma. 
 
     useState = estado locales !== redux. (mas adelante)
-    
+
+
+
+    renderizar en home los vg. con getVideogames
+
 
  

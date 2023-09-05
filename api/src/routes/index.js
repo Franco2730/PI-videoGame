@@ -12,7 +12,6 @@ const router = Router();
 
 
 // Configurar los routers 
-// Mañana continuar video nero 2 - 1hs:21min
 
 router.get("/videogames", getVideogames);
 router.get("/videogames/:id", getById);
