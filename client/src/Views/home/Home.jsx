@@ -11,7 +11,6 @@ const Home = () => {
   },[dispatch])
   return (
     <div>
-      <h1>Hola</h1>
       { 
         videoGames.length > 0 ? 
         videoGames.map((game,index) => {
