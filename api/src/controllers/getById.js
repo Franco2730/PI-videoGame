@@ -4,7 +4,7 @@ require("dotenv").config();
 const { DB_API } = process.env;
 
 const removeHTMLTags = (text) => {
-    // Expresión regular para buscar y eliminar las etiquetas HTML
+    // Expresión regular para buscar y eliminar las etiquetas HTML.
     const regex = /(<([^>]+)>)/gi;
     return text.replace(regex, "");
   };

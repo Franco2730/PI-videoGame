@@ -13,11 +13,7 @@ module.exports = (sequelize) => {
 
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      
-      validate: {
-        isAlpha: true
-      }
+      allowNull: false
     },
     
     description: {
@@ -32,7 +28,7 @@ module.exports = (sequelize) => {
 
     image: {
       type: DataTypes.TEXT,
-      allowNull: false
+      // allowNull: false
     },
 
     releaseDate: {
@@ -41,7 +37,7 @@ module.exports = (sequelize) => {
     },
 
     rating: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
 

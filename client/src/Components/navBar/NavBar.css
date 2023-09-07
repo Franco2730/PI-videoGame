@@ -1,0 +1,24 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Fondo negro al estilo de los arcades */
+    padding: 10px 20px;
+  }
+  
+  .nav-bar button {
+    background-color: #ff6f00; /* Botones de colores brillantes */
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-bar button:hover {
+    background-color: #ffea00; /* Cambia de color al pasar el mouse */
+    color: #000;
+    box-shadow: 0 0 5px #ffea00; /* Efecto de sombra al pasar el mouse */
+  }

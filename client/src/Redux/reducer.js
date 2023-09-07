@@ -1,6 +1,7 @@
 const initialState = { 
     allVideoGames: [],
- }
+}
+console.log(initialState.allVideoGames)
 
  const rootReducer = (state = initialState, action) => {
     switch(action.type){
@@ -8,6 +9,14 @@ const initialState = {
             return {
                 ...state,
                 allVideoGames: action.payload,
+            }
+        }
+        case 'GET_NAME':{
+            // const videoGames = [...state.allVideoGames]
+            // videoGames.unshift(action.payload)
+            return {
+                ...state,
+                allVideoGames: action.payload
             }
         }
         default:{

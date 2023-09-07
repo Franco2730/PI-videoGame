@@ -30,8 +30,8 @@ const getVideogames = async (req, res) => {
         return {
           id: videogame.id,
           name: videogame.name,
-          background_image: videogame.background_image,
-          genres: videogame.genres,
+          image: videogame.background_image,
+          genre: videogame.genres.map((genero) => genero.name).join(", "),
         };
       });
 

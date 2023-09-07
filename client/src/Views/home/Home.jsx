@@ -1,14 +1,22 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux';
 import { getAllVideoGames } from '../../Redux/actions';
 import Card from '../../Components/card/Card';
+import "../home/Home.css"
+
+
 
 const Home = () => {
   const dispatch = useDispatch();//camino pal reducer
-  const videoGames = useSelector((state) => state.allVideoGames)//vigilante del estado global, este vigilara una sola propiedad del EG, esta se la diremos nosotros.
+  const videoGames = useSelector((state) => state.allVideoGames)//vigilante del estado global, este vigilara una sola propiedad del estado global, esta se la diremos nosotros.
   useEffect(() => {
+    
+    if( videoGames.length === 0 ) {
     dispatch(getAllVideoGames())
-  },[dispatch])
+  }
+  },[dispatch]) 
+
   return (
     <div>
       { 
@@ -19,7 +27,7 @@ const Home = () => {
           )
         }): (
           <div>
-              Esperando datos. 
+              Esperando datos...
           </div>
         )
       } 

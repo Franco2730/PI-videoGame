@@ -1,0 +1,53 @@
+/* Form.css */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000; /* Fondo negro al estilo de los arcades */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ffea00; /* Efecto de sombra */
+  }
+  
+  .input-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .input-field input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ff6f00; /* Línea de fondo con color brillante */
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .input-field input::placeholder {
+    color: #ff6f00;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .form-button {
+    background-color: #ff6f00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-button:hover {
+    background-color: #ffea00;
+    color: #000;
+    box-shadow: 0 0 5px #ffea00;
+  }
+  

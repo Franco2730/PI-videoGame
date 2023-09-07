@@ -10,3 +10,15 @@ export const getAllVideoGames = () => {
          })
     }
 };
+
+export const getNameVideoGame = (name) => {
+    return async (dispatch) => {
+        const response = await fetch (`http://localhost:3001/videogames/?name=${name}`)
+        const results = await response.json()
+        console.log("axion" + results);
+        return dispatch({ 
+            type: 'GET_NAME',
+            payload: results
+         })
+    }
+};

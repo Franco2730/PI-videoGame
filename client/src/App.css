@@ -1,0 +1,17 @@
+/* App.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fondo negro al estilo de los arcades */
+    font-family: "Arial", sans-serif;
+    color: #fff;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  
