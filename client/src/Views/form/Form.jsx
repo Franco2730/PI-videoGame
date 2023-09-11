@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Form.css";
+import validate from "../../validations";
 import axios from "axios";
 
 
@@ -22,6 +23,8 @@ const Form = () => {
 
     setForm({ ...form, [property]: value }); //seteo el etado del formulario con las values correspondientes
  //llamo a la funcion validate pasandole lo mismo que al setForm para que nop ocurra un desfasaje
+
+    setForm(validate({ ...form, [property]: value })); //llamo a la funcion validate pasandole lo mismo que al setForm para que nop ocurra un desfasaje
   };
 
 
