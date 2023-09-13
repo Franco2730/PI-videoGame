@@ -1,53 +1,68 @@
-/* Form.css */
+/* Estilos para el fondo que ocupa toda la pantalla */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* 100% de la altura de la ventana */
+  background-image: url('../../img/fondoForm.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para el contenedor del formulario en forma de nube */
 .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000; /* Fondo negro al estilo de los arcades */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ffea00; /* Efecto de sombra */
-  }
-  
-  .input-field {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  
-  .input-field input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-bottom: 2px solid #ff6f00; /* Línea de fondo con color brillante */
-    background-color: transparent;
-    color: #fff;
-    font-size: 16px;
-    outline: none;
-  }
-  
-  .input-field input::placeholder {
-    color: #ff6f00;
-  }
-  
-  .image-preview {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-  }
-  
-  .form-button {
-    background-color: #ff6f00;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .form-button:hover {
-    background-color: #ffea00;
-    color: #000;
-    box-shadow: 0 0 5px #ffea00;
-  }
-  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Ajusta el ancho del formulario según tus necesidades */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Estilos para los contenedores de entrada */
+.container {
+  margin: 10px 0;
+}
+
+/* Estilos para las entradas de texto */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #000; /* Cambia el color de los bordes según tus preferencias */
+  background-color: transparent;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Estilos para el botón */
+.form-button {
+  background-color: #ff0000; /* Color rojo característico de Mario */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #ff4500; /* Color naranja al pasar el ratón */
+}
+
+/* Estilos para el campo de imagen */
+.checkBox input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #000; /* Cambia el color de los bordes según tus preferencias */
+  background-color: transparent;
+  font-size: 16px;
+  outline: none;
+}

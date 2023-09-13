@@ -1,7 +1,56 @@
-/* body {
-    background-image: url(../../img/3552-videojuegos.jpg);
+body {
+    background-color: #000; 
+    color: #fff; 
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  div {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .home-container {
+    background-image: url('../../img/fondoForm.avif'); 
     background-size: cover; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-    opacity: 0.3; /* Valor entre 0 (transparente) y 1 (opaco) */
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: #fff; 
+    font-family: 'Press Start 2P', cursive; 
+  }
   
+
+  .botton-page {
+    background-color: #00f; 
+    color: #fff; 
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+
+  .card {
+    background-color: #222222e1;
+    border: 2px solid rgba(0, 0, 255, 0); 
+    margin: 10px;
+    padding: 10px;
+    transition: transform 0.2s ease; 
+  
+  .card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  .waiting-message {
+    font-size: 24px;
+  }
+  
+  .page-number {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+}
