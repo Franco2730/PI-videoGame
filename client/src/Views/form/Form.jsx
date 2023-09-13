@@ -85,7 +85,7 @@ const Form = () => {
       </div>
       <div className="container">
         <input
-          type="text"
+          type="date"
           placeholder="FechaLanzamiento"
           value={form.releaseDate}
           name="releaseDate"

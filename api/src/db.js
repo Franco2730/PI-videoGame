@@ -1,4 +1,4 @@
-require('dotenv').config(); //Me permite manejar la informacion que se encuentra en el archivo .ENV
+require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const videoGameModel = require('./models/Videogame');
 const genreModel = require('./models/Genre');
@@ -10,8 +10,8 @@ const {
 const sequelize = new Sequelize( // * Instanciar sequelize y lo guardamos en una variable. 
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:5432/videogames`, //Aca colocamos 
   {
-  logging: false, // set to console.log to see the raw SQL queries
-  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+  logging: false,
+  native: false, 
 });
 
 videoGameModel(sequelize);
@@ -19,12 +19,10 @@ genreModel(sequelize);
 
 
 
-// En sequelize.models están todos los modelos importados como propiedades
-// Para relacionarlos hacemos un destructuring
+//Antes de hacer las relaciones, debemos traernos los modelos literales (no las funciones como tal).
 const { Videogame, Genre } = sequelize.models;
 
-// Aca vendrian las relaciones
-// Product.hasMany(Reviews);
+
 
   Videogame.belongsToMany(Genre, {through: "Videogame_Genre"})
 
