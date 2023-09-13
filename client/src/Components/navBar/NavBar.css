@@ -22,3 +22,31 @@
 .nav-bar button:nth-child(3) {
   background-color: #0000ff; 
 }
+
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffdc00; 
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', cursive; 
+}
+
+.filter-bar select {
+  background-color: #fff; 
+  color: #000; 
+  border: 1px solid #000; 
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive; 
+}
+
+.filter-bar select option {
+  background-color: #ffdc00; 
+  color: #000; 
+  font-family: 'Press Start 2P', cursive; 
+}
+

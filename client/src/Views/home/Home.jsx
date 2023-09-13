@@ -5,6 +5,7 @@ import { getAllVideoGames, setPage } from "../../Redux/actions";
 import CardsContainer from "../../Components/Cards/CardsContainer";
 import "../home/Home.css";
 
+
 const Home = () => {
   const VideogamesPerPage = 15;
   const dispatch = useDispatch(); //camino pal reducer

@@ -1,33 +1,44 @@
-.card {
-    width: 20rem;
-    border: .2rem solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.224);
-    margin: 1rem;
-    padding: 1rem;
-    background-color: #e4dcdc;
-  }
-  
-  .card-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .card-id,
-  .card-genre {
-    font-size: 0.9rem;
-    color: #555;
-    margin: 0;
-  }
+/* Card.css */
 
-  .cards{
-    display:inline-block;
-    margin-right: .5rem;
-  }
-  
+.cards {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 350px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #ffcc00;
+}
+
+.card-image {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 28px;
+  margin-top: 5px;
+}
+
+.card-id {
+  font-size: 14px;
+  color: #888;
+}
+
+.card-genre {
+  font-size: 14px;
+  color: #888;
+}
+

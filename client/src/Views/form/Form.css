@@ -13,12 +13,12 @@ body {
 /* Estilos para el contenedor del formulario en forma de nube */
 .form-container {
   position: absolute;
-  top: 50%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%; /* Ajusta el ancho del formulario según tus necesidades */
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  background-color: rgb(255, 255, 255); /* Fondo blanco semitransparente */
   border-radius: 20px; /* Bordes redondeados */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   text-align: center;

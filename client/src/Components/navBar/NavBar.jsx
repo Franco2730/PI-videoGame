@@ -2,7 +2,13 @@ import Search from "../searchBar/searchBar";
 import { Link } from "react-router-dom";
 import "./NavBar.css"; // Importa tu archivo de estilos
 import { useDispatch } from "react-redux";
-import { orderByGenre, orderByNumber, alphabeticOrder, filterCleaner, orderFrom } from "../../Redux/actions";
+import {
+  orderByGenre,
+  orderByNumber,
+  alphabeticOrder,
+  filterCleaner,
+  orderFrom,
+} from "../../Redux/actions";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -38,7 +44,6 @@ const NavBar = () => {
     dispatch(filterCleaner());
   };
   return (
-
     <div className="nav-bar">
       <Link to={"/"}>
         <button>Salir</button>
@@ -53,42 +58,42 @@ const NavBar = () => {
       </Link>
 
       <Search />
-    <button onClick={cleaner}>Limpiar filtros</button>
+      <button onClick={cleaner}>Limpiar filtros</button>
 
-      <select id="ByGenero" onChange={ByGenres}>
-        <option value="Action">Action</option>
-        <option value="Indie">Indie</option>
-        <option value="RPG">RPG</option>
-        <option value="Adventure">Adventure</option>
-        <option value="Strategy">Strategy</option>
-        <option value="Casual">Casual</option>
-        <option value="Puzzle">Puzzle</option>
-        <option value="Simulation">Simulation</option>
-        <option value="Arcade">Arcade</option>
-        <option value="Platformer">Platformer</option>
-        <option value="Massively Multiplayer">Massively Multiplayer</option>
-        <option value="Racing">Racing</option>
-        <option value="Sports">Sports</option>
-        <option value="Family">Family</option>
-        <option value="Board Games">Board Games</option>
-        <option value="Educational">Educational</option>
-        <option value="Card">Card</option>
-        <option value="Fighting">Fighting</option>
-      </select>
-      <select onChange={alphabeticOrderr}>
-        <option value="A-Z">A-Z</option>
-        <option value="Z-A">Z-A</option>
-      </select>
-      <select onChange={numberOrder}>
-        <option value=">">Rating {">"} Rating</option>
-        <option value="<">Rating {"<"} Rating</option>
-      </select>
-      <select onChange={orderFromm}>
-        <option value="API">Origen en API</option>
-        <option value="DB">Origen en base de datos</option>
-      </select>
-
-
+      <div className="filter-bar">
+        <select id="ByGenero" onChange={ByGenres}>
+          <option value="Action">Action</option>
+          <option value="Indie">Indie</option>
+          <option value="RPG">RPG</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Strategy">Strategy</option>
+          <option value="Casual">Casual</option>
+          <option value="Puzzle">Puzzle</option>
+          <option value="Simulation">Simulation</option>
+          <option value="Arcade">Arcade</option>
+          <option value="Platformer">Platformer</option>
+          <option value="Massively Multiplayer">Massively Multiplayer</option>
+          <option value="Racing">Racing</option>
+          <option value="Sports">Sports</option>
+          <option value="Family">Family</option>
+          <option value="Board Games">Board Games</option>
+          <option value="Educational">Educational</option>
+          <option value="Card">Card</option>
+          <option value="Fighting">Fighting</option>
+        </select>
+        <select onChange={alphabeticOrderr}>
+          <option value="A-Z">A-Z</option>
+          <option value="Z-A">Z-A</option>
+        </select>
+        <select onChange={numberOrder}>
+          <option value=">">Rating {">"} Rating</option>
+          <option value="<">Rating {"<"} Rating</option>
+        </select>
+        <select onChange={orderFromm}>
+          <option value="API">Origen en API</option>
+          <option value="DB">Origen en base de datos</option>
+        </select>
+      </div>
     </div>
   );
 };
