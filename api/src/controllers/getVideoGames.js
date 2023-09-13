@@ -58,8 +58,6 @@ const getVideogames = async (req, res) => {
       },
     });
 
-    //Acá hay algo mal, buscar en el video de back numero 2 (martes) que pasó Nicolas Burgueño.. Hay que buscar los users desde la api....!!!
-
     const { data } = await axios.get(
       `https://api.rawg.io/api/games?key=${DB_API}&page_size=100`
     );
@@ -69,6 +67,7 @@ const getVideogames = async (req, res) => {
       name: game.name,
       image: game.background_image,
       genre: game.genres.map((genero) => genero.name).join(", "),
+      rating: game.rating
     }));
 
     const allVideogames = [...databaseVideogames, ...apiVideoGames];

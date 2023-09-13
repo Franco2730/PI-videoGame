@@ -18,6 +18,7 @@ const Card = ({ id, name, image, genre }) => {
   );
 };
 
+
 export default Card;
 
 
