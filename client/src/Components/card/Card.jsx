@@ -1,7 +1,7 @@
 import "./Card.css";
 import { Link } from "react-router-dom";
 
-const Card = ({ id, name, image, genre }) => { //+ rating
+const Card = ({ id, name, image, genre }) => { 
   return (
     <div className="cards">
       <div className="card">
@@ -12,7 +12,6 @@ const Card = ({ id, name, image, genre }) => { //+ rating
           <h2 className="card-title">{name}</h2>
           <p className="card-id">{id}</p>
           <p className="card-genre">{genre}</p>
-          {/* <p>{rating}</p> */}
         </div>
       </div>
     </div>

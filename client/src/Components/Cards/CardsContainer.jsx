@@ -12,7 +12,6 @@ const CardsContainer = ({ allVideogames }) => {
             image={videogame.image}
             name={videogame.name}
             genre={videogame.genre}
-            //rating={ videogame.rating }
           />
         );
       })}

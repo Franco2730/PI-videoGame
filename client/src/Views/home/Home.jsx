@@ -67,7 +67,7 @@ const Home = () => {
           </div>
         </div>
       ) : (
-        <div>Esperando datos...</div>
+        <div className="espera">Esperando datos...</div>
       )}
     </div>
   );
