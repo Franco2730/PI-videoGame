@@ -32,8 +32,8 @@ const Form = () => {
 
     axios
       .post("http://localhost:3001/videogames", form)
-      .then((res) => alert(res.data))
-      .catch((error) => alert(error));
+      .then((res) => alert("Tu video juego ha sido creado exitosamente"))
+      .catch((error) => alert("Ha ocurrido un error al crear tu video juego"));
 
     setForm({
         name : "",

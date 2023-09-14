@@ -48,6 +48,7 @@ const getVideogames = async (req, res) => {
     }
 
     // Busco todos los videogames de la base de datos.
+
     const databaseVideogames = await Videogame.findAll({
       //fineAll trae todos los modelos.
       include: {
@@ -57,6 +58,15 @@ const getVideogames = async (req, res) => {
         through: { attributes: [] },
       },
     });
+    const databaseFilter = databaseVideogames.map(game => ({ 
+      id: game.id,
+      name: game.name,
+      image: game.image,
+      genre: game.Genres.map((genero) => genero.name).join(", "),
+      rating: game.rating
+
+     }))
+
 
     const { data } = await axios.get(
       `https://api.rawg.io/api/games?key=${DB_API}&page_size=100`
@@ -70,7 +80,7 @@ const getVideogames = async (req, res) => {
       rating: game.rating
     }));
 
-    const allVideogames = [...databaseVideogames, ...apiVideoGames];
+    const allVideogames = [...databaseFilter, ...apiVideoGames];
 
     res.status(200).json(allVideogames);
   } catch (error) {

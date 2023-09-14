@@ -10,8 +10,9 @@ const CardsContainer = ({ allVideogames }) => {
             key={videogame.id}
             id={videogame.id}
             image={videogame.image}
-            nombre={videogame.nombre}
+            name={videogame.name}
             genre={videogame.genre}
+            //rating={ videogame.rating }
           />
         );
       })}

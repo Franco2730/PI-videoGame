@@ -64,7 +64,7 @@ const rootReducer = (state = initialState, action) => {
       const genreToFilter = action.payload;
       const copy4 = [...state.backup];
       const videogamesFilteredByGenre = copy4.filter((vg) => {
-        const genres = vg.genre.split(", ");
+        const genres = vg.genre?.split(", ");
         return genres.includes(genreToFilter);
       });
 
