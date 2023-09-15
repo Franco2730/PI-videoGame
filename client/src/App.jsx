@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import Landing from "./Views/landing/Landing";
-import Detail from "./Views/detail/Detail";
+import Detail from "../src/Redux/detail/Detail";
 import Home from "./Views/home/Home.jsx";
 import Form from "./Views/form/Form";
 import NavBar from "./Components/navBar/NavBar";
 import { useLocation } from "react-router-dom";
-import "./App.css"; // Importa tu archivo de estilos
+import "./App.css"; 
 
 function App() {
   const location = useLocation();

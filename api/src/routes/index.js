@@ -27,3 +27,9 @@ module.exports = router;
 // modularizar las rutas de videgames, esto se logrará teniendo todas las rutas en un archivo aparte. 
 
 // La linea 27 de app.js establece como utilizar un archivo de ruta externo, esto es lo que queremos lograr en el archivo de index. basicamente tener un archivo de rutas exclusivo para videgames y que aun el server lo pueda utilizar.  
+
+//form: + validation en tiempo real - Mensajes y validations de < y > 
+//agregar genres --> back y crearlos en la bdd. 
+
+//juego bdd limpiar. 
+

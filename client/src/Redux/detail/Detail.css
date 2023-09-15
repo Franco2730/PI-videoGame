@@ -1,0 +1,67 @@
+.arcade-game {
+  background-color: #ffcc00; 
+  border: 2px solid #f00; 
+  border-radius: 8px; 
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.3s ease; 
+}
+
+.game-image {
+  max-width: 25rem; 
+  border-radius: 15px;
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.game-name {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 38px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.arcade-game:hover {
+  transform: translateY(10px) scale(1.05); 
+}
+
+.arcade-game:hover .game-name {
+  color: #ff0000; 
+  animation: bounce 0.5s infinite; 
+}
+
+.game-id {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 20px; 
+  color: rgb(0, 0, 0); 
+  margin-top: 0;
+}
+
+.game-details {
+  margin-top: 10px;
+}
+
+.game-description {
+  font-size: 25px;
+  color: #000;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+}
+
+.game-platform,
+.game-release-date,
+.game-rating,
+.game-genres {
+  font-size: 16px;
+  color: #000; 
+}

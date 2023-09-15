@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #000; /* Fondo negro al estilo de los arcades */
+    background-color: #1303f8; /* Fondo negro al estilo de los arcades */
     font-family: "Arial", sans-serif;
     color: #fff;
   }
@@ -13,5 +13,17 @@ body {
     align-items: center;
     min-height: 100vh;
   }
+  ::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+    background-color: #00fbff; /* Color de fondo de la barra de desplazamiento */
+  }
   
+  ::-webkit-scrollbar-thumb {
+    background-color: #0000ff; /* Color de la barra de desplazamiento que arrastramos */
+    border-radius: 6px; /* Bordes redondeados de la barra de desplazamiento que arrastramos */
+  }
   
+  ::-webkit-scrollbar-track {
+    background-color: #00fbff; /* Color de fondo de la barra de desplazamiento total */
+    border-radius: 0; /* Sin bordes redondeados en la barra de desplazamiento total */
+  }
