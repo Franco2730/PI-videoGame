@@ -1,30 +1,28 @@
 import { useState } from "react";
 import "./Form.css";
 import axios from "axios";
-
+import { useSelector } from "react-redux";
 
 const Form = () => {
-
   const [form, setForm] = useState({
-        name : "",
-        description : "",
-        platforms : "",
-        image : "",
-        releaseDate : "",
-        rating : "",
-        Genero: []
+    name: "",
+    description: "",
+    platforms: "",
+    image: "",
+    releaseDate: "",
+    rating: "",
+    Genero: [],
   });
 
-  
+  const genres = useSelector((state) => state.genres); //2
+
   const changeHandler = (event) => {
     const property = event.target.name; //propiedad del estado form = name del imput
     const value = event.target.value; // guardo el valuo (cuando tipeo en el imput)
 
     setForm({ ...form, [property]: value }); //seteo el etado del formulario con las values correspondientes
- //llamo a la funcion validate pasandole lo mismo que al setForm para que nop ocurra un desfasaje
-
+    //llamo a la funcion validate pasandole lo mismo que al setForm para que nop ocurra un desfasaje
   };
-
 
   //funcion que previene el comportamiento default del submit (recargado de pagina) y hace la peticion post al backend
   const submitHandler = (event) => {
@@ -36,12 +34,12 @@ const Form = () => {
       .catch((error) => alert("Ha ocurrido un error al crear tu video juego"));
 
     setForm({
-        name : "",
-        description : "",
-        platforms : "",
-        image : "",
-        releaseDate : "",
-        rating : ""
+      name: "",
+      description: "",
+      platforms: "",
+      image: "",
+      releaseDate: "",
+      rating: "",
     });
   };
 
@@ -93,17 +91,38 @@ const Form = () => {
         ></input>
       </div>
       <div className="checkBox">
-        <input type="text" placeholder="Url de la imagen" name="image" onChange={changeHandler}></input>
+        <input
+          type="text"
+          placeholder="Url de la imagen"
+          name="image"
+          onChange={changeHandler}
+        ></input>
         {form.image && (
           <img src={form.image} alt={form.name} className="imagePreview" />
         )}
       </div>
+
+      {genres.map((genero) => (
+        <div>
+          <label>
+
+            <input
+              type="checkbox"
+              value={genero.name}
+              name="genre"
+              checked={selectedgenres.includes(genero.name)}
+              onChange={checkboxChangeHandler}
+            ></input>
+            {genero.name}
+          </label>
+        </div>
+      ))}
+
       <button className="form-button" type="submit">
         Crear Juego
       </button>
     </form>
   );
 };
-
 
 export default Form;

@@ -90,6 +90,7 @@ const NavBar = () => {
           <option value="<">Rating {"<"} Rating</option>
         </select>
         <select onChange={orderFromm}>
+          <option value="rest">Seleccione su origen</option>
           <option value="API">Origen en API</option>
           <option value="DB">Origen en base de datos</option>
         </select>

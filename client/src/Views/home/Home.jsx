@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllVideoGames, setPage } from "../../Redux/actions";
+import { getAllVideoGames, setPage, getAllGenres } from "../../Redux/actions";
 import CardsContainer from "../../Components/Cards/CardsContainer";
 import "../home/Home.css";
 
@@ -11,10 +11,16 @@ const Home = () => {
   const dispatch = useDispatch(); //camino pal reducer
   const videoGames = useSelector((state) => state.allVideoGames); //vigilante del estado global, este vigilara una sola propiedad del estado global, esta se la diremos nosotros.
   const currentPage = useSelector((state) => state.current); //devuelve el current
+  const genres = useSelector((state) => state.genres);
   useEffect(() => {
     if (videoGames.length === 0) {
       dispatch(getAllVideoGames());
     }
+
+    if (genres.length === 0) {
+      dispatch(getAllGenres()); //2--
+    }
+
   }, [dispatch]);
 
   // Función para obtener los games de la página actual

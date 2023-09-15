@@ -60,3 +60,15 @@ export const setPage = (pageNumber) => ({
     type: FILTER_CLEANER,
     payload: null,
   });
+
+
+  export const getAllGenres = () => {
+    return async (dispatch) => {
+        const response = await fetch (`http://localhost:3001/genres`)
+        const results = await response.json()
+        return dispatch({ 
+            type: 'GET_GENRES',
+            payload: results
+         })
+    }
+};

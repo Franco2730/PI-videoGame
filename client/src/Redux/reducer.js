@@ -2,6 +2,7 @@ const initialState = {
   allVideoGames: [],
   current: 1,
   backup: [],
+  genres: []
 };
 console.log(initialState.allVideoGames);
 
@@ -77,8 +78,18 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         allVideoGames: videogamesFilteredByGenre,
       };
+
+      
+      //1...Si el value es rest el mismo es reseteado. <--
     case "ORDER_FROM":
       const copy5 = [...state.backup];
+      if( action.payload === "rest" ) {
+        return {
+          ...state,
+          allVideoGames: state.backup,
+        };
+      }
+
       if (action.payload === "DB") {
         const videogamesFilteredDB = copy5.filter((vg) => isNaN(vg.id));
 
@@ -114,6 +125,13 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         allVideoGames: state.backup,
       };
+
+      //2
+      case 'GET_GENRES':
+        return {
+          ...state,
+          genres: action.payload,
+        }
 
     default: {
       return {
