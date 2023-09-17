@@ -1,7 +1,7 @@
-import { useState } from "react"
-import { useDispatch } from 'react-redux';
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { getNameVideoGame } from "../../Redux/actions";
-
+import "./searchBar.css";
 
 const Search = () => {
   const [input, setInput] = useState("");
@@ -15,9 +15,19 @@ const Search = () => {
     dispatch(getNameVideoGame(input));
   };
   return (
-    <div>
-      <input onChange={handlerChange} value={input} type="text" />
-      <button onClick={handlerAdd}>Buscar</button>
+    <div className="container-Fi">
+      <div className="mario-container">
+        <input
+          className="mario-input"
+          onChange={handlerChange}
+          value={input}
+          type="text"
+          placeholder="Search your favorite Video Game"
+        />
+        <button className="mario-button" onClick={handlerAdd}>
+          Search
+        </button>
+      </div>
     </div>
   );
 };

@@ -1,42 +1,59 @@
 .background {
-  background-color: #87CEEB; /* Color de fondo azul claro */
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Arial', sans-serif;
+  background-color: #0d70d496; /* Fondo azul como el cielo de Mario */
+  padding: 20px;
+  text-align: center;
 }
 
 .form-container {
-  background-color: #fff; /* Color de fondo blanco para el formulario */
-  border-radius: 15px;
-  padding: 30px;
-  width: 400px; /* Ancho del formulario */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
-  position: relative;
-}
-
-.form-container::before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-bottom: 25px solid #fff; /* Triángulo blanco para simular una nube */
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  background-color: #eeb4b400; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .input-container {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
+
+.genre-container {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.genre-label {
+  display: flex;
+  align-items: center;
+  user-select: none; /* Evita la selección de texto al hacer clic */
+}
+
+/* Estilos para el botón y otros elementos del formulario */
+
+/* Añade un estilo de animación para los géneros si lo deseas */
+.genre-label:hover {
+  transform: scale(1.1); /* Ejemplo de escala al pasar el mouse */
+  transition: transform 0.3s ease;
+}
+
+.form-button {
+  background-color: #FF0000; 
+  color: #FFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-button:hover {
+  background-color: #FF4500; /* Cambio de color al pasar el mouse */
+}
+
 
 input[type="text"],
 input[type="number"],
@@ -48,38 +65,9 @@ input[type="date"] {
   font-size: 16px;
 }
 
-input[type="checkbox"] {
-  margin-right: 5px;
-}
 
-.genre-container {
-  margin-top: 15px;
-}
 
-.genre-label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 16px;
-}
 
-.form-button {
-  background-color: #ff5722; /* Color de botón naranja */
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-}
 
-.form-button:disabled {
-  background-color: #ccc; /* Color de botón desactivado */
-  cursor: not-allowed;
-}
-
-.imagePreview {
-  max-width: 100%;
-  margin-top: 10px;
-}
 
 

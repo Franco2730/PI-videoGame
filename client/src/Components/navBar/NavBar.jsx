@@ -1,6 +1,6 @@
 import Search from "../searchBar/searchBar";
 import { Link } from "react-router-dom";
-import "./NavBar.css"; // Importa tu archivo de estilos
+import "./NavBar.css"; 
 import { useDispatch } from "react-redux";
 import {
   orderByGenre,
