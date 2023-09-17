@@ -124,7 +124,7 @@ const Form = () => {
           />
           {errors.text && <p>{errors.text}</p>}
         </div>
-
+ 
         <div className="input-container">
           <input
             type="date"
