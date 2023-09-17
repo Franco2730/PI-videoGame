@@ -123,7 +123,7 @@ const Form = () => {
             onChange={changeHandler}
           />
           {errors.text && <p>{errors.text}</p>}
-        </div>
+        </div> 
  
         <div className="input-container">
           <input
