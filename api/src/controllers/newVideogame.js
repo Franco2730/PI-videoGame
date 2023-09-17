@@ -8,7 +8,7 @@ const newVideogame = async (req, res) => {
         image,
         releaseDate,
         rating,
-        Genero,
+        genre,
     } = req.body;
 
     try {
@@ -21,7 +21,7 @@ const newVideogame = async (req, res) => {
         releaseDate,
         rating,
         });
-        Genero.forEach(async (g) => {
+        genre.forEach(async (g) => {
             let genresDB = await Genre.findAll({ where: { name: g } });
             await newVideogame.addGenre(genresDB);
         });

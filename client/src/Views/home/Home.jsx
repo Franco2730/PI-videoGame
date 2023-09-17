@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllVideoGames, setPage, getAllGenres } from "../../Redux/actions";
@@ -31,14 +30,14 @@ const Home = () => {
     return videoGames.slice(startIndex, endIndex);
   };
 
-  // Función para cambiar a la página anterior
+  // Fn previ p
   const handlePrevPage = () => {
     if (currentPage > 1) {
       dispatch(setPage(currentPage - 1));
     }
   };
 
-  // Función para cambiar a la página siguiente
+  // Fn next P
   const handleNextPage = () => {
     if (currentPage < totalPages) {
       dispatch(setPage(currentPage + 1));

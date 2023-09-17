@@ -10,7 +10,6 @@ const Card = ({ id, name, image, genre }) => {
         </Link>
         <div className="card-content">
           <h2 className="card-title">{name}</h2>
-          <p className="card-id">{id}</p>
           <p className="card-genre">{genre}</p>
         </div>
       </div>
