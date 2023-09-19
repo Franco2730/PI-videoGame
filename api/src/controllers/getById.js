@@ -1,3 +1,8 @@
+// Tengo un proyecto en react, el cual es bastante largo. Te indicare si corresponde al front o al back y te especificaré todos los archivos y dentro de que carpeta se encuentran. Me gustaria saber si puedes ir explicandome archivo por archivo, paso por paso, todo de tallado. Y una vez que yo coloque "Termine" significa que ya te envié todo el proyecto, ahi voy a necesitar un resumen de todos los archivos y su relacion entre si. Puede ser ? 
+
+//Los siguientes archivos pertenecen al back de nuestro proyecto.
+//api/src/controllers/getById.js:
+
 const { Videogame, Genre } = require ("../db"); 
 const axios = require ('axios');
 require("dotenv").config();

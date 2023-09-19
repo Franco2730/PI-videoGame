@@ -17,11 +17,11 @@ const Form = () => {
 
   const [errors, setErrors] = useState({
     //3
-    name: "",
-    description: "",
-    Rating: "",
-    platforms: "",
-    releaseDate: "",
+    name: "Este campo no puede estar vacío",
+    description: "Este campo no puede estar vacío",
+    Rating: "Este campo no puede estar vacío",
+    platforms: "Este campo no puede estar vacío",
+    releaseDate: "Este campo no puede estar vacío",
   });
 
   const [selectedGenres, setSelectedGenres] = useState([]);
@@ -121,7 +121,7 @@ const Form = () => {
             name="platforms"
             onChange={changeHandler}
           />
-          {errors.text && <p>{errors.text}</p>}
+          {errors.platforms && <p>{errors.platforms}</p>}
         </div>
 
         <div className="input-container">

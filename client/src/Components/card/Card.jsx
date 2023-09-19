@@ -20,10 +20,6 @@ const Card = ({ id, name, image, genre }) => {
 
 export default Card;
 
-
-
-
-
 //Quien revisa los pi. 
 //De que forma lo hacen. 
 
