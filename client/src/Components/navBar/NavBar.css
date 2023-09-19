@@ -3,7 +3,7 @@
   height: 100%;
   padding: 0;
   margin: 0;
-  background-image: url("../../img/fondoForm.avif");
+  background-image: url("../../img/FondoForm.png");
   background-repeat: repeat-x; /* Repite la imagen horizontalmente */
   animation: moverNubes 20s linear infinite;
 }

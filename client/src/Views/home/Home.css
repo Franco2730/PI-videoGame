@@ -1,5 +1,6 @@
 body {
-    background-color: #000; 
+    background-color: #7ddaeb;
+    margin: 0;
     color: #fff; 
     font-family: 'Press Start 2P', cursive;
   }
@@ -10,7 +11,11 @@ body {
   }
 
   .home-container {
-    background-image: url('../../img/fondoForm.avif'); 
+    background-image: url('../../img/FondoForm.png'); 
+    width: 110%;
+    height: 110%; 
+    padding: 0;
+    margin: 0;
     background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed; 
